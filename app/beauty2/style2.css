@@ -1,0 +1,229 @@
+/* Import premium fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+/* COLOR SYSTEM */
+:root {
+  --bg-main: linear-gradient(135deg, #e0f2fe, #f1f5f9, #ffffff);
+  --card-bg: #ffffffee;
+  --header-font: "Poppins", sans-serif;
+  --body-font: "Inter", sans-serif;
+
+  --text-dark: #0f172a;
+  --text-light: #475569;
+  --accent: #2563eb;
+  --accent-hover: #1e40af;
+  --highlight-bg: #d8e1e4;
+  --shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* FIX FULL PAGE BACKGROUND */
+body {
+  background: var(--bg-main) !important;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.b2-container {
+  background: transparent;  /* remove background here */
+}
+
+/* ===== HERO SECTION ===== */
+.b2-hero {
+  text-align: center;
+  padding: 60px 40px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 50px;
+  transition: 0.3s ease;
+}
+
+.b2-hero:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(90, 23, 23, 0.418);
+}
+
+.b2-name {
+  font-size: 50px;
+  font-family: var(--header-font);
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.b2-title {
+  font-size: 24px;
+  font-family: var(--header-font);
+  color: var(--accent);
+  margin-top: 5px;
+}
+
+.b2-tagline {
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+/* ===== SOCIAL LINKS ===== */
+.b2-social {
+  margin-top: 25px;
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+}
+
+.b2-social a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+.b2-social a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ===== RESUME BUTTON ===== */
+.b2-resume-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 30px;
+  background: var(--accent);
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.b2-resume-btn:hover {
+  background: var(--accent-hover);
+}
+
+/* ===== CARD SECTIONS ===== */
+.b2-card {
+  background: var(--card-bg);
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 45px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.b2-card:hover {
+  background: var(--highlight-bg);
+  transform: translateY(-4px);
+}
+
+/* SECTION TITLE */
+.b2-section-title {
+  font-family: var(--header-font);
+  font-size: 28px;
+  font-weight: 600;
+  border-left: 5px solid var(--accent);
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+/* PARAGRAPH TEXT */
+.b2-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+/* ===== SKILLS ===== */
+.b2-skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.b2-skill {
+  background: #dbeafe;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: #1e3a8a;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid #93c5fd;
+  transition: 0.2s ease;
+}
+
+.b2-skill:hover {
+  background: #bfdbfe;
+  transform: scale(1.05);
+}
+
+/* ===== PROJECTS ===== */
+.b2-project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.b2-project-card {
+  background: #f1f5f9;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  transition: 0.3s ease;
+}
+
+.b2-project-card:hover {
+  background: #c8d1d1;
+  transform: translateY(-4px);
+}
+
+.b2-project-title {
+  font-size: 22px;
+  font-family: var(--header-font);
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.b2-project-desc {
+  color: var(--text-light);
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.b2-project-links a {
+  margin-right: 20px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.b2-project-links a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ===== CERTIFICATIONS ===== */
+.b2-cert-item a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.b2-cert-item a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+.b2-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  color: var(--text-light);
+  font-size: 15px;
+}

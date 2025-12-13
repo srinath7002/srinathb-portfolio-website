@@ -1,0 +1,156 @@
+/* Import premium modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-gradient: linear-gradient(to bottom right, #dbeafe, #f0f9ff, #ffffff);
+  --card-bg: #ffffff;
+  --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  --text-dark: #0f172a;
+  --text-light: #475569;
+  --accent: #3b82f6;
+}
+
+/* MAIN PAGE */
+.beauty1-container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 60px 25px;
+
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+  background: rgba(18, 48, 104, 0.65);
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.hero-name {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.hero-title {
+  font-size: 22px;
+  margin-top: 10px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-tagline {
+  margin-top: 12px;
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+/* CARD SECTIONS */
+.card {
+  background: var(--card-bg);
+  padding: 35px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #e5e7eb;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--text-dark);
+  border-left: 5px solid var(--accent);
+  padding-left: 12px;
+}
+
+/* GENERAL TEXT */
+.section-text {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text-light);
+}
+
+/* SKILLS */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  background: #dbeafe;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid #bfdbfe;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e3a8a;
+
+  transition: 0.2s ease;
+}
+
+.skill-tag:hover {
+  background: #bfdbfe;
+  cursor: pointer;
+}
+
+/* PROJECTS */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-card {
+  background: #f8fafc;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: var(--card-shadow);
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.project-description {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+/* CERTIFICATIONS */
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cert-item {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cert-item:last-child {
+  border-bottom: none;
+}
+
+/* CONTACT */
+.contact-card p {
+  font-size: 16px;
+  color: var(--text-light);
+  margin: 6px 0;
+}

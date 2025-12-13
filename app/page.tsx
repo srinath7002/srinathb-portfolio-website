@@ -1,65 +1,96 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main className="max-w-5xl mx-auto px-6 py-16">
+
+      {/* Header Section */}
+      <header className="text-center mb-20">
+        <h1 className="text-6xl font-extrabold text-slate-900 drop-shadow-sm">
+          Srianth Bhupathi
+        </h1>
+        <p className="text-2xl text-slate-600 mt-4">
+          QA Automation Engineer
+        </p>
+
+        <div className="w-28 h-1 bg-blue-500 mx-auto mt-6 rounded-full"></div>
+      </header>
+
+      {/* About Section */}
+      <section id="about" className="mb-20 bg-white p-8 rounded-2xl shadow-lg">
+        <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          About Me
+        </h2>
+
+        <p className="text-slate-600 leading-relaxed text-lg">
+          Passionate and results-driven professional with strong experience in
+          automation, web technologies, and building clean, modern digital solutions.
+          Always learning, always improving — and committed to delivering impactful work.
+        </p>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="mb-20 bg-white p-8 rounded-2xl shadow-lg">
+        <h2 className="text-4xl font-bold text-slate-900 mb-6">Skills</h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {[
+            "Python",
+            "JavaScript",
+            "TypeScript",
+            "Selenium",
+            "Playwright",
+            "Next.js",
+            "React",
+            "Tailwind CSS",
+          ].map((skill) => (
+            <div
+              key={skill}
+              className="px-4 py-2 bg-blue-50 text-blue-700 font-medium rounded-lg border border-blue-200 hover:bg-blue-100 hover:border-blue-300 text-center shadow-sm"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              {skill}
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="mb-20">
+        <h2 className="text-4xl font-bold text-slate-900 mb-6">Projects</h2>
+
+        <div className="space-y-8">
+          <div className="p-8 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl">
+            <h3 className="text-2xl font-semibold text-slate-900">Project Title 1</h3>
+            <p className="text-slate-600 mt-3 text-lg">
+              Describe your project here. Mention technologies, what you built, and 
+              your contribution. This card has clean spacing and modern UI.
+            </p>
+          </div>
+
+          <div className="p-8 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl">
+            <h3 className="text-2xl font-semibold text-slate-900">Project Title 2</h3>
+            <p className="text-slate-600 mt-3 text-lg">
+              Another project card example. You can add GitHub buttons, links, or images
+              later when building the final template package.
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="mb-20 bg-white p-8 rounded-2xl shadow-lg">
+        <h2 className="text-4xl font-bold text-slate-900 mb-4">Contact</h2>
+
+        <p className="text-lg text-slate-700">
+          <strong>Email:</strong> your@email.com
+        </p>
+        <p className="text-lg text-slate-700 mt-2">
+          <strong>LinkedIn:</strong> linkedin.com/yourprofile
+        </p>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-slate-500 text-sm py-6 mt-10">
+        © 2025 Your Name — All Rights Reserved.
+      </footer>
+    </main>
   );
 }
