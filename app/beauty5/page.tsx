@@ -171,54 +171,65 @@ export default function Beauty7() {
         </section>
 
         {/* EXPERIENCE */}
-        <section id="experience" className="gx-widget">
-          <h3 className="gx-widget-title">Experience</h3>
-          <div className="gx-timeline">
+        <section id="experience">
+          <div className="gx-section-image">
+            <img
+              src="/experience.jpg"   // <-- your image inside public/
+              alt="Experience"
+              className="gx-section-image-img"
+            />
+          </div>
+          <div className="gx-exp-list-wrapper">
             {profileData.experience.map((exp, index) => (
-              <div key={index} className="gx-timeline-item">
-                <div className="gx-timeline-dot" />
-                <div className="gx-timeline-content">
-                  <div className="gx-timeline-role">{exp.role}</div>
-                  <div className="gx-timeline-company">{exp.company}</div>
-                  <div className="gx-timeline-duration">{exp.duration}</div>
-                  <ul className="gx-timeline-list">
-                    {exp.details.map((detail, i) => (
-                      <li key={i}>{detail}</li>
-                    ))}
-                  </ul>
+              <div key={index} className="gx-exp-card">
+                {/* HEADER */}
+                <div className="gx-exp-header">
+                  <h4 className="gx-exp-title">
+                    {exp.role} | {exp.company}
+                  </h4>
+                  <span className="gx-exp-duration">{exp.duration}</span>
                 </div>
+
+                {/* BULLET POINTS */}
+                <ul className="gx-exp-points">
+                  {exp.details.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </section>
 
         {/* PROJECTS */}
-        <section id="projects" className="gx-widget">
+        <section id="projects">
+          {/* Section title */}
           <h3 className="gx-widget-title">Projects</h3>
-          <div className="gx-projects">
+
+          <div className="gx-project-list">
             {profileLinks.projects.map((project, index) => (
               <div key={index} className="gx-project-card">
-                <div className="gx-project-header">
-                  <h4>{project.title}</h4>
-                  <div className="gx-project-tags">
-                    {project.tech.map((t: string, i: number) => (
-                      <span key={i}>{t}</span>
-                    ))}
-                  </div>
+                {/* PROJECT HEADER */}
+                <h4 className="gx-project-title">
+                  {project.title}
+                </h4>
+
+                {/* PROJECT DESCRIPTION */}
+                <p className="gx-project-desc">
+                  {project.description}
+                </p>
+
+                {/* TECH STACK */}
+                <div className="gx-project-tags">
+                  {project.tech.map((t: string, i: number) => (
+                    <span key={i} className="gx-pill">
+                      {t}
+                    </span>
+                  ))}
                 </div>
-                <p className="gx-project-desc">{project.description}</p>
-                <div className="gx-project-links">
-                  {project.demo && (
-                    <a href={project.demo} target="_blank" rel="noreferrer">
-                      Demo
-                    </a>
-                  )}
-                  {project.github && (
-                    <a href={project.github} target="_blank" rel="noreferrer">
-                      Code
-                    </a>
-                  )}
-                </div>
+
+
+                
               </div>
             ))}
           </div>

@@ -39,7 +39,7 @@ export const profileData = {
 
   experience: [
     {
-      company: "Methodica Technologies | General Motors",
+      company: "Methodica Technologies",
       role: "Senior SDET / QA Automation Engineer",
       duration: "May 2023 – Present",
       details: [
@@ -65,15 +65,7 @@ export const profileData = {
         "Increased automation coverage to 95% across key modules.",
       ],
     },
-    {
-      company: "ARI",
-      role: "Graduate Engineer Trainee",
-      duration: "Apr 2019 – Sep 2019",
-      details: [
-        "Achieved 95% automation coverage in critical modules.",
-        "Reduced regression execution time by 40% via CI/CD automation.",
-      ],
-    },
+    
   ],
 
  projects: [
