@@ -22,18 +22,69 @@ export default function Beauty6() {
 
       {/* HERO */}
       <section className="b6-hero">
-        <div className="b6-hero-content">
-          <h1>{profileData.hero.name}</h1>
-          <h2>{profileData.hero.title}</h2>
-          <p>{profileData.hero.tagline}</p>
 
-          <div className="b6-hero-actions">
-            <a href={profileLinks.resume.url} target="_blank" rel="noreferrer">
-              Download Resume
-            </a>
-            <a href={profileLinks.social.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
+        {/* LEFT — 40% Glass Welcome */}
+        <div className="b6-hero-left">
+          <div className="b6-glass-card">
+
+            <div className="b6-hello">
+              HELLO.... <span className="b6-wave">👋</span>
+            </div>
+
+            <h3 className="b6-welcome">
+              Welcome to<br />
+              <span>My Portfolio</span>
+            </h3>
+            <h4 className="b6-welcome">    
+              This is.... <span className="b6-wave">👉</span>
+            </h4>
+
+          </div>
+        </div>
+
+        {/* RIGHT — 60% Profile Info */}
+        <div className="b6-hero-right">
+          <div className="b6-hero-content">
+
+            <h1 className="b6-name">{profileData.hero.name}</h1>
+            <h2 className="b6-role">{profileData.hero.title}</h2>
+            <p className="b6-tagline">{profileData.hero.tagline}</p>
+
+            <div className="b6-actions">
+              <a
+                href={profileLinks.resume.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download Resume
+              </a>
+
+              <a
+                href={profileLinks.social.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="b6-linkedin-link"
+              >
+                <img
+                    src="/linkedin.png"
+                    alt="LinkedIn"
+                    className="b6-linkedin-icon"/>
+              </a>
+
+              <a
+                href={profileLinks.social.github}
+                target="_blank"
+                rel="noreferrer"
+                className="b6-github-link"
+              >
+                <img
+                    src="/github.jpg"
+                    alt="github"
+                    className="b6-github-icon"/>
+              </a>
+            </div>
+            
+
           </div>
         </div>
       </section>
