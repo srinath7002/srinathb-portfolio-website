@@ -90,14 +90,25 @@ export default function Beauty6() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="b6-section">
-        <h3 className="b6-section-title">About</h3>
-        <p>{profileData.about.description}</p>
+      <section id="about" className="b6-section b6-about-section">
+
+        {/* Background image container */}
+        <div className="b6-about-hero">
+          <h3 className="b6-about-title">About</h3>
+        </div>
+
+        {/* About description card */}
+        <div className="b6-about-card">
+          <p className="b6-about-text">
+            {profileData.about.description}
+          </p>
+        </div>
+
       </section>
 
       {/* SKILLS */}
       <section id="skills" className="b6-section b6-alt">
-        <h3 className="b6-section-title">Skills</h3>
+        <h3 className="b6-section-title">Skills Expertise</h3>
 
         <div className="b6-skills-grid">
           {profileData.skills.map((skill, i) => (

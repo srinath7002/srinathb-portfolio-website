@@ -313,21 +313,76 @@ body {
   100% { transform: rotate(0deg); }
 }
 
-
-/* SECTIONS */
-.b6-section {
-  padding: 90px 60px;
+.b6-about-section {
+  margin-top: 40px;   /* adjust: 24px / 32px / 40px */
 }
 
-.b6-alt {
-  background: #f9fafb;
+/* ===============================
+   ABOUT — PREMIUM UI
+================================ */
+
+/* About section wrapper */
+.b6-about-section {
+  position: relative;
+  padding-top: 0;
 }
 
-.b6-section-title {
-  font-size: 34px;
-  font-weight: 700;
-  margin-bottom: 36px;
+.b6-about-hero {
+  height: 220px;
+  width: 100%;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,   /* deep slate */
+    gray   /* rich gray */
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
+
+/* "About" text on image */
+.b6-about-title {
+  font-size: 42px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* Floating card */
+.b6-about-card {
+  max-width: 900px;
+  margin: -80px auto 0;   /* overlap effect */
+  padding: 42px;
+
+   background:
+    linear-gradient(
+      rgba(1, 5, 24, 0),
+      rgba(2, 6, 23, 0.65)
+    ),
+    url("/about-bg.jpg");
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* About text */
+.b6-about-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: white;
+  margin: 0;
+}
+
 
 /* SKILLS */
 .b6-skills-grid {
