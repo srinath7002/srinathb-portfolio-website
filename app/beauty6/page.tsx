@@ -134,24 +134,60 @@ export default function Beauty6() {
       </section>
 
 
-      {/* EXPERIENCE */}
-      <section id="experience" className="b6-section">
-        <h3 className="b6-section-title">Experience</h3>
+     {/* EXPERIENCE */}
+    <section id="experience" className="b6-section b6-experience-section">
 
+      {/* Experience Label */}
+      <h3 className="b6-section-title b6-experience-title">
+        Experience
+      </h3>
+
+      <div className="b6-experience-list">
         {profileData.experience.map((exp, i) => (
           <div key={i} className="b6-experience-item">
-            <h4>
-              {exp.role} <span>| {exp.company}</span>
-            </h4>
-            <div className="b6-exp-duration">{exp.duration}</div>
-            <ul>
-              {exp.details.map((d, j) => (
-                <li key={j}>{d}</li>
-              ))}
-            </ul>
+
+            {/* MOBILE PHONE UI */}
+            <div className="b6-exp-mobile">
+              <div className="b6-exp-mobile-screen">
+
+                {/* PHONE NOTCH */}
+                <div className="b6-exp-phone-notch"></div>
+
+                {/* PHONE HEADER (INSIDE MOBILE) */}
+                <div className="b6-exp-mobile-header">
+                  <div className="b6-exp-mobile-role">
+                    {exp.role}
+                  </div>
+
+                  <div className="b6-exp-mobile-company">
+                    {exp.company}
+                  </div>
+
+                  <div className="b6-exp-mobile-duration">
+                    {exp.duration}
+                  </div>
+                </div>
+
+                {/* PHONE BODY */}
+                <div className="b6-exp-mobile-body">
+                  {exp.details.map((d, j) => (
+                    <div key={j} className="b6-exp-point">
+                      {d}
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </div>
+
           </div>
         ))}
-      </section>
+      </div>
+
+    </section>
+
+
+
 
       {/* PROJECTS */}
       <section id="projects" className="b6-section b6-alt">

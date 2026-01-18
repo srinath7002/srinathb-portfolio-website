@@ -441,7 +441,7 @@ body {
 .b6-skills-badge {
   padding: 16px 20px;
 
-  background: linear-gradient(180deg, #fde047, #facc15);
+  background: linear-gradient(180deg, #fde047, #27b171);
   color: #111;
 
   font-size: 30px;
@@ -526,24 +526,167 @@ Badge hover
     0 10px 30px rgba(223, 92, 44, 0.22);
 }
 
-/* EXPERIENCE */
+/* ===============================
+   EXPERIENCE SECTION
+================================ */
+
+
+.b6-experience-section {
+  background: linear-gradient(180deg, white, #f9f7fc);
+}
+
+/* EXPERIENCE TITLE */
+.b6-experience-title {
+  display: inline-block;
+  padding: 14px 80px;
+  margin-bottom: 48px;
+
+  border-radius: 999px;
+  background: linear-gradient(135deg, #13c9aa, #7c3aed);
+
+  color: #ffffff;
+  font-weight: 1000;
+  font-size: large;
+  letter-spacing: 0.6px;
+
+  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.b6-experience-title:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(124, 58, 237, 0.45);
+}
+
+/* EXPERIENCE LIST — 2 COLUMNS */
+.b6-experience-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 56px;
+}
+
+/* STACK ON MOBILE */
+@media (max-width: 900px) {
+  .b6-experience-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .b6-experience-item {
-  padding: 24px;
-  margin-bottom: 30px;
-  background: white;
-  border-radius: 14px;
+  padding: 36px 28px;
+  border-radius: 22px;
+
+  /* 🔥 ADD IMAGE HERE */
+  background:
+    url("/experience-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   border: 1px solid #e5e7eb;
-  transition: all 0.25s ease;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.b6-experience-item:hover {
-  transform: translateY(-6px);
-  border-color: var(--primary);
+/* ===============================
+   MOBILE PHONE UI (REALISTIC)
+================================ */
+
+.b6-exp-mobile {
+  display: flex;
+  justify-content: center;
 }
 
-.b6-exp-duration {
+/* PHONE SCREEN */
+.b6-exp-mobile-screen {
+  width: 100%;
+  max-width: 360px;
+  padding: 22px 18px 26px;
+
+  background:
+    radial-gradient(120% 120% at 50% 0%, rgba(168,85,247,0.35), transparent 60%),
+    linear-gradient(180deg, #020617, #0f172a);
+
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 40px 90px rgba(2, 6, 23, 0.7),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+
+.b6-exp-mobile-screen:hover {
+  transform: translateY(-8px) rotateX(4deg);
+}
+
+/* NOTCH */
+.b6-exp-phone-notch {
+  width: 120px;
+  height: 6px;
+  margin: 0 auto 18px;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+}
+
+/* PHONE HEADER */
+.b6-exp-mobile-header {
+  text-align: center;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.b6-exp-mobile-role {
+  color: #e5e7eb;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.b6-exp-mobile-company {
+  color: #c7d2fe;
   font-size: 13px;
-  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.b6-exp-mobile-duration {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* PHONE BODY */
+.b6-exp-mobile-body {
+  display: grid;
+  gap: 14px;
+}
+
+/* EXPERIENCE POINT (APP ROW) */
+.b6-exp-point {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+
+  padding: 14px 16px;
+  border-radius: 16px;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.b6-exp-point:hover {
+  background: rgba(168, 85, 247, 0.35);
+  transform: translateX(6px);
 }
 
 /* PROJECTS */
