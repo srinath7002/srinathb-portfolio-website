@@ -107,17 +107,32 @@ export default function Beauty6() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="b6-section b6-alt">
-        <h3 className="b6-section-title">Skills Expertise</h3>
+      <section id="skills" className="b6-section b6-alt b6-skills-section">
 
-        <div className="b6-skills-grid">
-          {profileData.skills.map((skill, i) => (
-            <div key={i} className="b6-skill">
-              <span>{skill}</span>
+        <div className="b6-skills-layout">
+
+          {/* LEFT 20% — LABEL */}
+          <div className="b6-skills-left">
+            <div className="b6-skills-badge">
+              Skills Expertise
             </div>
-          ))}
+          </div>
+
+          {/* RIGHT 80% — SKILLS CARDS */}
+          <div className="b6-skills-right">
+            <div className="b6-skills-grid">
+              {profileData.skills.map((skill, i) => (
+                <div key={i} className="b6-skill">
+                  <span>{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
+
       </section>
+
 
       {/* EXPERIENCE */}
       <section id="experience" className="b6-section">
