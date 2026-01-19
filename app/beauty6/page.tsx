@@ -190,27 +190,39 @@ export default function Beauty6() {
 
 
       {/* PROJECTS */}
-      <section id="projects" className="b6-section b6-alt">
-        <h3 className="b6-section-title">Projects</h3>
-
-        {profileLinks.projects.map((p, i) => (
-          <div key={i} className="b6-project">
-            <h4>{p.title}</h4>
-            <p>{p.description}</p>
-
-            <div className="b6-tags">
-              {p.tech.map((t, j) => (
-                <span key={j}>{t}</span>
-              ))}
-            </div>
-
-            <div className="b6-links">
-              {p.demo && <a href={p.demo} target="_blank">Demo</a>}
-              {p.github && <a href={p.github} target="_blank">Code</a>}
-            </div>
+      <section id="projects" className="b6-section b6-projects-section">
+          <div className="b6-projects-label-wrap">
+            <h3 className="b6-projects-label-3d">
+              Projects
+            </h3>
           </div>
-        ))}
+
+        <div className="b6-projects-grid">
+          {profileLinks.projects.map((p, i) => (
+            <div key={i} className="b6-project-card">
+
+              {/* Project Header */}
+              <div className="b6-project-header">
+                <h4 className="b6-project-title">{p.title}</h4>
+              </div>
+
+              {/* Project Description */}
+              <p className="b6-project-desc">{p.description}</p>
+
+              {/* Tech Stack */}
+              <div className="b6-project-tags">
+                {p.tech.map((t, j) => (
+                  <span key={j} className="b6-project-tag">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+            </div>
+          ))}
+        </div>
       </section>
+
 
       {/* CERTIFICATIONS */}
       <section id="certifications" className="b6-section">

@@ -689,20 +689,335 @@ Badge hover
   transform: translateX(6px);
 }
 
-/* PROJECTS */
-.b6-project {
-  padding: 28px;
-  border-radius: 16px;
-  background: white;
-  border: 1px solid #e5e7eb;
-  margin-bottom: 36px;
-  transition: all 0.3s ease;
+/* ===============================
+   PROJECTS — PREMIUM UI
+================================ */
+
+/* ===============================
+   PROJECTS LABEL — 3D ANIMATED PLATE
+================================ */
+
+.b6-projects-label-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+  perspective: 900px; /* enables 3D feel */
 }
 
-.b6-project:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+.b6-projects-label-3d {
+  position: relative;
+  display: inline-block;
+
+  padding: 18px 68px 18px 58px;
+
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #0b1220;
+
+  /* TOP FACE */
+  background: linear-gradient(135deg, #dac402, #03fd10, #0414f3);
+  border-radius: 18px;
+
+  /* Make it a custom 3D “ticket/ribbon” shape */
+  clip-path: polygon(
+    0% 18%,
+    6% 0%,
+    92% 0%,
+    100% 50%,
+    92% 100%,
+    6% 100%,
+    0% 82%
+  );
+
+  /* 3D depth */
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.28),
+    0 6px 0 rgba(180, 83, 9, 0.95); /* bottom hard edge */
+
+  transform: translateZ(0) rotateX(0deg) rotateY(0deg);
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
 }
+
+/* LEFT SIDE FACE (3D) */
+.b6-projects-label-3d::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  bottom: 10px;
+  width: 14px;
+
+  background: linear-gradient(180deg, #f59e0b, #b45309);
+  border-radius: 14px;
+
+  transform: translateZ(-1px) skewY(-18deg);
+  opacity: 0.95;
+}
+
+/* SHINE SWEEP (animated) */
+.b6-projects-label-3d::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.55) 45%,
+    rgba(255,255,255,0) 70%
+  );
+
+  transform: translateX(-140%) skewX(-18deg);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Hover: float + tilt + stronger depth */
+.b6-projects-label-3d:hover {
+  transform: translateY(-8px) rotateX(10deg) rotateY(-10deg);
+  box-shadow:
+    0 28px 65px rgba(15, 23, 42, 0.38),
+    0 10px 0 rgba(187, 13, 158, 0.98);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Trigger shine animation on hover */
+.b6-projects-label-3d:hover::after {
+  animation: b6ShineSweep 0.9s ease forwards;
+}
+
+/* Optional: subtle idle “breathing” motion */
+.b6-projects-label-3d {
+  animation: b6FloatIdle 3.2s ease-in-out infinite;
+}
+.b6-projects-label-3d:hover {
+  animation: none; /* stop idle when hovering */
+}
+
+@keyframes b6ShineSweep {
+  0%   { transform: translateX(-140%) skewX(-18deg); opacity: 0.2; }
+  35%  { opacity: 0.65; }
+  100% { transform: translateX(140%) skewX(-18deg); opacity: 0.0; }
+}
+
+@keyframes b6FloatIdle {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ===============================
+   PROJECTS SECTION — 3D UPGRADE
+================================ */
+
+.b6-projects-section {
+  background:
+    linear-gradient(rgba(255,255,255,0.96), rgba(255,255,255,0.96)),
+    url("/projects-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* GRID */
+.b6-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 48px;
+  perspective: 1200px; /* enables 3D */
+}
+
+.b6-projects-section {
+  margin-top: 80px;   /* adjust: 60px / 80px / 100px */
+}
+
+/* ===============================
+   PROJECT CARD — 3D
+================================ */
+
+.b6-project-card {
+  position: relative;
+  padding: 42px 36px;
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.94),
+      rgba(255,255,255,0.94)
+    ),
+    url("/project-card-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  border: 1px solid rgba(15,23,42,0.12);
+
+  box-shadow:
+    0 18px 40px rgba(15,23,42,0.12),
+    0 6px 0 rgba(15,23,42,0.06);
+
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+
+  transition:
+    transform 0.45s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+/* FLOAT + TILT */
+.b6-project-card:hover {
+  transform:
+    translateY(-14px)
+    rotateX(8deg)
+    rotateY(-8deg);
+
+  border-color: rgba(124,58,237,0.55);
+
+  box-shadow:
+    0 45px 90px rgba(124,58,237,0.28),
+    0 14px 0 rgba(124,58,237,0.25);
+}
+
+/* GLOW LAYER */
+.b6-project-card::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 32px;
+
+  background: radial-gradient(
+    rgba(124,58,237,0.35),
+    transparent 70%
+  );
+
+  opacity: 0;
+  z-index: -1;
+  filter: blur(26px);
+
+  transition: opacity 0.45s ease;
+}
+
+.b6-project-card:hover::after {
+  opacity: 1;
+}
+
+/* ===============================
+   PROJECT CONTENT
+================================ */
+
+/* TITLE */
+.b6-project-title {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 12px;
+
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* DESCRIPTION */
+.b6-project-desc {
+  font-size: 15.5px;
+  color: #334155;
+  line-height: 1.75;
+  margin-bottom: 26px;
+}
+
+/* ===============================
+   TECH TAGS — FLOATING
+================================ */
+
+.b6-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.b6-project-tag {
+  padding: 7px 16px;
+  border-radius: 999px;
+
+  background: rgba(124,58,237,0.14);
+  color: #4c1d95;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+
+  box-shadow: 0 6px 14px rgba(124,58,237,0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.b6-project-tag:hover {
+  background: rgba(124,58,237,0.28);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(124,58,237,0.45);
+}
+
+/* ===============================
+   ACTION BUTTONS — 3D PRESS
+================================ */
+
+.b6-project-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.b6-project-actions a {
+  padding: 14px 24px;
+  border-radius: 16px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.b6-project-actions a.primary {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 24px rgba(224, 221, 230, 0.45),
+    0 4px 0 rgba(67,56,202,0.9);
+}
+
+.b6-project-actions a.secondary {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(15,23,42,0.2);
+  color: #1e293b;
+
+  box-shadow:
+    0 6px 16px rgba(15,23,42,0.12);
+}
+
+.b6-project-actions a:hover {
+  transform: translateY(-4px);
+}
+
+.b6-project-actions a:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
 
 .b6-tags span {
   display: inline-block;
