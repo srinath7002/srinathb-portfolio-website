@@ -225,24 +225,54 @@ export default function Beauty6() {
 
 
       {/* CERTIFICATIONS */}
-      <section id="certifications" className="b6-section">
-        <h3 className="b6-section-title">Certifications</h3>
-        <ul className="b6-cert-list">
-          {profileData.certifications.map((c, i) => (
-            <li key={i}>🎓 {c}</li>
-          ))}
-        </ul>
+      <section id="certifications" className="b6-section b6-cert-section">
+
+        <div className="b6-cert-wrapper">
+
+          {/* LEFT SMALL RECTANGLE */}
+          <div className="b6-cert-label">
+            Certifications
+          </div>
+
+          {/* CONNECTOR */}
+          <div className="b6-cert-connector"></div>
+
+          {/* RIGHT BIG RECTANGLE */}
+          <div className="b6-cert-card">
+            <ul className="b6-cert-list">
+              {profileData.certifications.map((c, i) => (
+                <li key={i}>🎓 {c}</li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
       </section>
 
+
       {/* CONTACT */}
-      <section id="contact" className="b6-section b6-alt">
-        <h3 className="b6-section-title">Contact</h3>
-        <p>
-          Email:{" "}
-          <a href={`mailto:${profileLinks.contact.email}`}>
+      <section id="contact" className="b6-section b6-contact-section">
+        {/* <h3 className="b6-section-title b6-contact-title">Contact</h3> */}
+
+        <div className="b6-contact-card">
+          <p className="b6-contact-text">
+            Let’s connect and build something great together.
+          </p>
+
+          <a
+            href={`mailto:${profileLinks.contact.email}`}
+            className="b6-contact-email"
+          >
             {profileLinks.contact.email}
           </a>
-        </p>
+          <a
+            href={`mailto:${profileLinks.contact.phone}`}
+            className="b6-contact-email"
+          >
+            {profileLinks.contact.phone}
+          </a>
+        </div>
       </section>
 
       {/* FOOTER */}

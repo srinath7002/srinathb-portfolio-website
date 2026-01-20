@@ -394,7 +394,7 @@ body {
 
   /* SECTION SIZE */
   min-height: 520px;
-  padding: 90px 60px;
+  padding: 90px 80px;
 
   /* ✅ BACKGROUND FITS EXACTLY */
   background: 
@@ -525,6 +525,9 @@ Badge hover
     0 28px 60px rgba(24, 65, 161, 0.18),
     0 10px 30px rgba(223, 92, 44, 0.22);
 }
+#skills {
+  margin-bottom: 80px;   /* gap after Skills */
+}
 
 /* ===============================
    EXPERIENCE SECTION
@@ -542,7 +545,7 @@ Badge hover
   margin-bottom: 48px;
 
   border-radius: 999px;
-  background: linear-gradient(135deg, #13c9aa, #7c3aed);
+  background: linear-gradient(135deg, #3ff308, #cf5423);
 
   color: #ffffff;
   font-weight: 1000;
@@ -578,7 +581,7 @@ Badge hover
 
   /* 🔥 ADD IMAGE HERE */
   background:
-    url("/experience-bg.jpg");
+    url("/exp.jpg");
 
   background-size: cover;
   background-position: center;
@@ -690,7 +693,7 @@ Badge hover
 }
 
 /* ===============================
-   PROJECTS — PREMIUM UI
+   PROJECTS — 
 ================================ */
 
 /* ===============================
@@ -1018,22 +1021,193 @@ Badge hover
   box-shadow: none;
 }
 
-
-.b6-tags span {
-  display: inline-block;
-  background: var(--primary-soft);
-  color: var(--primary);
-  padding: 6px 12px;
-  border-radius: 999px;
-  margin-right: 8px;
-  font-size: 12px;
+.b6-cert-section {
+  margin-top: 80px;   /* 👈 controls gap from Projects */
 }
 
-/* FOOTER */
+/* ===============================
+   CERTIFICATIONS SECTION
+================================ */
+
+.b6-cert-section {
+  background:
+    radial-gradient(1200px at 10% 20%, rgba(124,58,237,0.08), transparent),
+    linear-gradient(180deg, #3fbe5b, #6fd8c1);
+}
+
+/* MAIN WRAPPER */
+.b6-cert-wrapper {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  transition: transform 0.35s ease;
+}
+
+.b6-cert-wrapper:hover {
+  transform: translateY(-6px);
+}
+
+/* LEFT SMALL RECTANGLE */
+.b6-cert-label {
+  padding: 16px 28px;
+  border-radius: 18px;
+
+
+  background: linear-gradient(135deg, #bd5611, #7c3aed);
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+
+  box-shadow: 0 16px 40px rgba(124,58,237,0.45);
+  z-index: 2;
+  align-self: flex-start;
+}
+
+
+
+/* RIGHT BIG RECTANGLE */
+.b6-cert-card {
+  padding: 50px 150px;
+  border-radius: 26px;
+
+  background:
+    url("/certifications-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  box-shadow:
+    0 30px 70px rgba(15,23,42,0.12),
+    inset 0 0 0 1px rgba(15,23,42,0.08);
+
+  transform-style: preserve-3d;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+/* HOVER 3D EFFECT */
+.b6-cert-wrapper:hover .b6-cert-card {
+  transform: translateY(-6px) rotateX(4deg);
+  box-shadow:
+    0 50px 100px rgba(202, 58, 22, 0.25);
+}
+
+/* CERTIFICATION LIST */
+.b6-cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  gap: 14px;
+}
+
+.b6-cert-list li {
+  padding: 14px 18px;
+  border-radius: 14px;
+
+  background: rgba(124,58,237,0.08);
+  color: #1e293b;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.b6-cert-list li:hover {
+  background: rgba(124,58,237,0.18);
+  transform: translateX(6px);
+}
+
+.b6-contact-section {
+  margin-top: 80px;   /* gap after Certifications */
+}
+
+/* ===============================
+   CONTACT — GLASS CARD
+================================ */
+
+.b6-contact-section {
+  min-height: 300px;
+  align-items: center;
+  position: relative;
+
+
+  background:
+    linear-gradient(
+      rgba(160, 170, 192, 0.75),
+      rgba(119, 128, 150, 0.75)
+    ),
+    url("/contact-bg1.jpg");
+
+  background-size: cover;        /* fills section */
+  background-position: center;   /* centered */
+  background-repeat: no-repeat;  /* no tiling */
+
+  color: #ffffff;
+}
+
+
+
+.b6-contact-card {
+  max-width: 520px;
+  margin-left: 20%;
+  padding: 40px;
+
+  border-radius: 28px;
+  background: gray;
+  backdrop-filter: blur(16px);
+
+  text-align: center;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.45);
+}
+
+.b6-contact-text {
+  font-size: 16px;
+  margin-bottom: 22px;
+  color: #e5e7eb;
+}
+
+.b6-contact-email {
+  display: inline-block;
+  padding: 14px 28px;
+
+  border-radius: 999px;
+  background: linear-gradient(135deg, #b85e5b, #7c3aed);
+
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+
+  box-shadow: 0 12px 28px rgba(124,58,237,0.45);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.b6-contact-email:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(124,58,237,0.65);
+}
+
+/* ===============================
+   FOOTER — PREMIUM
+================================ */
+
 .b6-footer {
   text-align: center;
-  padding: 42px;
+  padding: 48px 24px;
+
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: #cbd5f5;
+
   font-size: 13px;
-  color: #64748b;
-  border-top: 1px solid #e5e7eb;
+  letter-spacing: 0.4px;
+
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
 }
+
