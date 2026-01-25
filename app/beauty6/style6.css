@@ -1419,3 +1419,108 @@ body {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
+
+
+/* ===============================
+   MOBILE FIXES (Desktop unchanged)
+================================ */
+@media (max-width: 768px) {
+
+  /* 1) NAVBAR */
+  .b6-navbar {
+    padding: 12px 16px;     /* reduce huge desktop padding */
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .b6-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .b6-nav a {
+    width: auto;            /* stop fixed 120px causing overflow */
+    min-width: 110px;
+  }
+
+  /* 2) HERO */
+  .b6-hero {
+    flex-direction: column; /* stack instead of 40/60 split */
+    height: auto;
+  }
+
+  .b6-hero-left,
+  .b6-hero-right {
+    width: 100%;
+    padding: 36px 18px;     /* reduce large paddings */
+  }
+
+  .b6-name {
+    font-size: 38px;        /* readable on mobile */
+  }
+
+  .b6-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 3) ABOUT CARD */
+  .b6-about-card {
+    margin: -60px 14px 0;   /* prevent edge overflow */
+    padding: 28px;
+  }
+
+  /* 4) SKILLS */
+  .b6-skills-section {
+    padding: 60px 18px;     /* reduce 90px 80px */
+  }
+
+  .b6-skills-layout {
+    flex-direction: column;
+  }
+
+  .b6-skills-left,
+  .b6-skills-right {
+    flex: 0 0 100%;
+  }
+
+  .b6-skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .b6-skill {
+    width: 100%;            /* your 90% causes odd spacing in grid */
+  }
+
+  /* 5) CERTIFICATIONS */
+  .b6-cert-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .b6-cert-card {
+    padding: 36px 18px;     /* FIX: remove 200px padding */
+    width: 100%;
+    max-width: 720px;
+  }
+
+  /* 6) CONTACT */
+  .b6-contact-card {
+    margin-left: 0;         /* FIX: remove desktop offset */
+    margin: 0 auto;
+    width: 92%;
+    padding: 30px 18px;
+  }
+
+  .b6-contact-row {
+    width: 100%;
+  }
+
+  .b6-contact-email {
+    width: 100%;
+    text-align: center;
+  }
+}
+
