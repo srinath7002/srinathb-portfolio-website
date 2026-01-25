@@ -1,9 +1,9 @@
 export const profileData = {
   hero: {
     name: "Srinath Bhupathi",
-    title: "Senior SDET | QA Automation Engineer",
+    title: "SDET | QA Automation Engineer",
     tagline:
-      "Expert in Playwright, Selenium, API Automation, CI/CD, AWS, and scalable automation frameworks.",
+      "Expert in Playwright, Selenium, API Automation, CI/CD, AWS, and AI-driven scalable test frameworks, leveraging ML-assisted testing, intelligent test optimization, and self-healing automation to deliver high-quality, resilient systems",
   },
 
   about: {
@@ -40,17 +40,15 @@ export const profileData = {
   experience: [
     {
       company: "Methodica Technologies",
-      role: "Senior SDET / QA Automation Engineer",
+      role: "SDET / QA Automation Engineer",
       duration: "May 2023 – Present",
       details: [
-        "Designed scalable Playwright automation frameworks using TypeScript for UI & API testing.",
+        "Built Playwright automation frameworks in TypeScript for UI and API testing.",
         "Developed Selenium automation using Python and Java with POM and BDD patterns.",
-        "Integrated automation with CI/CD (GitHub Actions, Jenkins, Azure DevOps).",
-        "Executed distributed test execution using AWS Lambda, S3 & CloudWatch.",
-        "Performed REST & GraphQL validation using Postman and REST Assured.",
-        "Automated mobile tests using Appium integrated with BrowserStack & Sauce Labs.",
-        "Worked with automotive protocols like CAN & J1939 for infotainment validation.",
-        "Improved regression execution efficiency by 40% through framework optimization.",
+        "Integrated automated tests into CI/CD pipelines using Jenkins, GitHub Actions, and Azure DevOps.",
+        "Ran distributed test execution using AWS Lambda, S3, and CloudWatch.",
+        "Used AI/ML concepts like self-healing locators and flaky test detection to improve stability.",
+        "Worked closely with developers and QA teams to improve test coverage and release quality.",
       ],
     },
     {
@@ -58,11 +56,12 @@ export const profileData = {
       role: "QA Automation Engineer",
       duration: "Sep 2019 – May 2023",
       details: [
-        "Developed automation frameworks using Selenium, WebdriverIO, and Robot Framework.",
-        "Built REST API automation using Python Requests and REST Assured.",
-        "Designed JMeter scripts for performance and load testing.",
-        "Contributed to Agile sprints, release planning, and automation strategies.",
-        "Increased automation coverage to 95% across key modules.",
+        "Built automation using Selenium, WebdriverIO, and Robot Framework.",
+        "Automated REST APIs using Python Requests and REST Assured.",
+        "Created JMeter scripts for performance and load testing.",
+        "Followed SDLC and STLC processes for structured testing.",
+        "Participated in Agile sprints, planning, and release cycles.",
+        "Improved automation coverage to 95% on key modules.",
       ],
     },
     
@@ -169,9 +168,11 @@ export const profileData = {
 
 
   certifications: [
+    "AI/ML Fundamentals(AWS)",
     "ISTQB Foundation Level (CTFL)",
     "Selenium with Python",
-    "Postman API Testing Certification",
+    "Postman API Testing",
+    "Quality Assurance"
   ],
 
   resume: {
@@ -183,5 +184,5 @@ export const profileData = {
     linkedin: "linkedin.com/in/srinath-bhupathi",
   },
 
-  footer: "© 2025 Srinath Bhupathi. All Rights Reserved.",
+  footer: "© 2026 Srinath Bhupathi. All Rights Reserved.",
 };

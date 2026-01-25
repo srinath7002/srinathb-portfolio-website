@@ -398,11 +398,7 @@ body {
 
   /* ✅ BACKGROUND FITS EXACTLY */
   background: 
-    linear-gradient(
-      rgba(252, 236, 237, 0.7),
-      rgba(177, 219, 149, 0.7)
-    ),
-    url("/skills2.jpg");
+    url("/skills3.jpg");
 
   background-size: cover;        /* fits section */
   background-position: center;   /* centered */
@@ -500,7 +496,7 @@ body {
 .b6-skill {
   transform-style: preserve-3d;
   perspective: 1000px;
-  background: #ffffff;
+  background: #fcfafa;
   border-radius: 14px;
   padding: 18px;
 
@@ -738,7 +734,7 @@ body {
 
 /* CLEAN HOVER */
 .b6-exp-point:hover {
-  background: rgb(112, 107, 107);
+  background: lightgreen;
   transform: translateX(4px);
 }
 /* ===============================
@@ -775,9 +771,6 @@ body {
     inset 0 1px 0 rgba(255,255,255,0.7),
     inset 0 -12px 18px rgba(0,0,0,0.25);
 
-  transform-style: preserve-3d;
-  animation: phoneFloat 6s ease-in-out infinite;
-  transition: transform 0.4s ease;
 }
 
 /* GLASS EDGE HIGHLIGHT */
@@ -851,14 +844,14 @@ body {
 }
 
 .b6-exp-mobile-role {
-  color: #0f172a;
-  font-size: 15px;
+  color: #f84711;
+  font-size: 16px;
   font-weight: 800;
 }
 
 .b6-exp-mobile-company {
-  color: #334155;
-  font-size: 13px;
+  color: black;
+  font-size: 15px;
   font-weight: 600;
   margin-top: 4px;
 }
@@ -878,7 +871,7 @@ body {
 /* EXPERIENCE CARD */
 .b6-exp-point {
   background: #ffffff;
-  color: #0f172a;
+  color: black;
 
   padding: 14px 16px;
   border-radius: 16px;
@@ -899,7 +892,7 @@ body {
 .b6-exp-point:hover {
   transform: translateX(6px);
   box-shadow:
-    0 14px 28px rgba(0,0,0,0.25);
+    0 14px 28px lightcoral;
 }
 
 
@@ -1242,8 +1235,11 @@ body {
 
 .b6-cert-section {
   background:
-    radial-gradient(1200px at 10% 20%, rgba(124,58,237,0.08), transparent),
-    linear-gradient(180deg, #3fbe5b, #6fd8c1);
+    url("/certifications2-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* MAIN WRAPPER */
@@ -1261,11 +1257,11 @@ body {
 
 /* LEFT SMALL RECTANGLE */
 .b6-cert-label {
-  padding: 16px 28px;
+  padding: 16px 70px;
   border-radius: 18px;
 
 
-  background: linear-gradient(135deg, #bd5611, #7c3aed);
+  background: linear-gradient(135deg, #e24848, #7c3aed);
   color: #ffffff;
 
   font-size: 16px;
@@ -1281,7 +1277,7 @@ body {
 
 /* RIGHT BIG RECTANGLE */
 .b6-cert-card {
-  padding: 50px 150px;
+  padding: 50px 200px;
   border-radius: 26px;
 
   background:
@@ -1294,16 +1290,9 @@ body {
     0 30px 70px rgba(15,23,42,0.12),
     inset 0 0 0 1px rgba(15,23,42,0.08);
 
-  transform-style: preserve-3d;
-  transition: box-shadow 0.35s ease, transform 0.35s ease;
 }
 
-/* HOVER 3D EFFECT */
-.b6-cert-wrapper:hover .b6-cert-card {
-  transform: translateY(-6px) rotateX(4deg);
-  box-shadow:
-    0 50px 100px rgba(202, 58, 22, 0.25);
-}
+
 
 /* CERTIFICATION LIST */
 .b6-cert-list {
@@ -1316,20 +1305,18 @@ body {
 }
 
 .b6-cert-list li {
-  padding: 14px 18px;
+  padding: 14px 30px;
   border-radius: 14px;
 
-  background: rgba(124,58,237,0.08);
-  color: #1e293b;
+  background: lightblue;
+  color: black;
 
   font-size: 15px;
   font-weight: 600;
-
-  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .b6-cert-list li:hover {
-  background: rgba(124,58,237,0.18);
+  background: lightgreen;
   transform: translateX(6px);
 }
 
@@ -1343,9 +1330,9 @@ body {
 
 .b6-contact-section {
   min-height: 300px;
+  display: flex;
   align-items: center;
   position: relative;
-
 
   background:
     linear-gradient(
@@ -1354,15 +1341,14 @@ body {
     ),
     url("/contact-bg1.jpg");
 
-  background-size: cover;        /* fills section */
-  background-position: center;   /* centered */
-  background-repeat: no-repeat;  /* no tiling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   color: #ffffff;
 }
 
-
-
+/* CARD */
 .b6-contact-card {
   max-width: 520px;
   margin-left: 20%;
@@ -1374,35 +1360,46 @@ body {
 
   text-align: center;
 
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.45);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
 }
 
+/* TEXT */
 .b6-contact-text {
-  font-size: 16px;
+  font-size: 19px;
   margin-bottom: 22px;
   color: #e5e7eb;
 }
 
+/* ROW */
+.b6-contact-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* EMAIL & PHONE PILL */
 .b6-contact-email {
   display: inline-block;
   padding: 14px 28px;
 
   border-radius: 999px;
-  background: linear-gradient(135deg, #b85e5b, #7c3aed);
 
-  color: #ffffff;
-  font-weight: 800;
+  color: #020617;
+  font-weight: 500;
   text-decoration: none;
+  background: lightskyblue;
 
-  box-shadow: 0 12px 28px rgba(124,58,237,0.45);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
+/* HOVER (UNCHANGED BEHAVIOR) */
 .b6-contact-email:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 50px rgba(124,58,237,0.65);
+  background: lightgreen;
+  color: black;
+  transform: translateX(6px);
 }
 
 /* ===============================

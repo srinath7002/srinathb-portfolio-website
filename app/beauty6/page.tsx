@@ -51,13 +51,13 @@ export default function Beauty6() {
             <p className="b6-tagline">{profileData.hero.tagline}</p>
 
             <div className="b6-actions">
-              <a
+              {/* <a
                 href={profileLinks.resume.url}
                 target="_blank"
                 rel="noreferrer"
               >
                 Download Resume
-              </a>
+              </a> */}
 
               <a
                 href={profileLinks.social.linkedin}
@@ -139,7 +139,7 @@ export default function Beauty6() {
 
       {/* Experience Label */}
       <h3 className="b6-section-title b6-experience-title">
-        Experience
+        Experience & Impact
       </h3>
 
       <div className="b6-experience-list">
@@ -256,22 +256,29 @@ export default function Beauty6() {
         {/* <h3 className="b6-section-title b6-contact-title">Contact</h3> */}
 
         <div className="b6-contact-card">
+
           <p className="b6-contact-text">
             Let’s connect and build something great together.
           </p>
 
-          <a
-            href={`mailto:${profileLinks.contact.email}`}
-            className="b6-contact-email"
-          >
-            {profileLinks.contact.email}
-          </a>
-          <a
-            href={`mailto:${profileLinks.contact.phone}`}
-            className="b6-contact-email"
-          >
-            {profileLinks.contact.phone}
-          </a>
+          {/* EMAIL */}
+          <div className="b6-contact-row">
+            <a
+              className="b6-contact-email"
+            >
+                📮  {profileLinks.contact.email}
+            </a>
+          </div>
+
+          {/* PHONE */}
+          <div className="b6-contact-row">
+            <a
+              className="b6-contact-email"
+            >
+              📞 {profileLinks.contact.phone}
+            </a>
+          </div>
+
         </div>
       </section>
 

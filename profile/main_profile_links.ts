@@ -128,7 +128,7 @@ export const profileLinks = {
   // CONTACT LINKS (Updated)
   // --------------------------------------------
   contact: {
-    email: "srinath.sree7002@gmail.com",
+    email: "srinath.sree455@gmail.com",
     phone: "+1 248-525-7002",
     whatsapp: "https://wa.me/12485257002",
   },
@@ -149,7 +149,7 @@ export const profileLinks = {
   // --------------------------------------------
   footer: {
     copyright:
-      "© 2025 Srinath Bhupathi. All Rights Reserved.",
+      "© 2026 Srinath Bhupathi. All Rights Reserved.",
     privacyPolicy: "/privacy-policy",
     termsOfUse: "/terms",
   },
