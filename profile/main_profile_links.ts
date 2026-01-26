@@ -22,7 +22,7 @@ export const profileLinks = {
   // --------------------------------------------
   social: {
     linkedin: "https://www.linkedin.com/in/bhupathi-srinath-958921150/",
-    github: "https://github.com/srinathbhupathi",
+    github: "https://github.com/srinath7002?tab=repositories",
     twitter: "https://twitter.com/srinath_b",
     portfolio: "https://srinath-portfolio.com", 
   },
